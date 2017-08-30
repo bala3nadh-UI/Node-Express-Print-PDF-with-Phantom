@@ -1,0 +1,5 @@
+save the downloaded folder on desktop
+In 'webRoutes.js', give the absolute path like "C:\Users\z1148\Desktop\node\routes\webRoutes.js"
+
+npm install
+node main.js
