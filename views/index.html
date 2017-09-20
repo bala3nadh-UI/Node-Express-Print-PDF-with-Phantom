@@ -6,7 +6,16 @@
     </head>
     <body>
         <h1>Index HTML</h1>
-        <input id="enteredData" type="text">
+        <div id="toPrint">
+            <li>新濠博亞不必為錯誤累積會員獎賞及優惠而負上任何責任，當中包括因電腦或技術故障、操作員失誤、虛報或超出新濠博亞控制範圍的各項原因等。</li>
+            <li>會員同意新濠博亞收集所得的會員資料作為一般市場推廣之用。</li>
+            <li>倘若遺失或被竊會員卡，新濠博亞對其補發卡有獨立裁決權。新濠博亞保留收取補發卡需繳付費用之權利。</li>
+            <li>新濠會/皇璽會/摩卡會會員卡為新濠博亞所擁有，當新濠博亞要求時，會員必須即時無條件歸還會員卡。</li>
+            <li>新濠博亞保留隨時終止、更改或修訂在此的條款及細則的權利，並對一切爭論有最終決定權。</li>
+            <li>新濠博亞在此內容沒有申明特定獎賞、優惠及推廣活動內容的義務和責任。</li>
+            <li>若本條款之規則及內容與其他文字版本存有差異，則一切以中文版本之條款及細則為標準。</li>
+        </div>
+        <input id="toPrint2" type="text">
         <button id="button1" onclick="clicked()">Print PDF</button>
         <p id="p1"></p>
         <p id="dataPara"></p>
@@ -20,7 +29,7 @@
             // Call our ajax endpoint on the server
             function clicked() {
                 var data = {};
-					data.message = $('#enteredData').val();
+					data.message = $('#toPrint').html();
                     console.log(data.message);
                 $.ajax({
                     url: '/api/printPdf',
